@@ -59,8 +59,18 @@ struct ContentView: View {
                         
                 Spacer()
         }
-        .padding()
+        .onAppear {
+            startTimer()
+        }
     }
+    // Timer to Change Number Every 5 Seconds
+        func startTimer() {
+            timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
+                wrongCount += 1
+                attempts += 1
+                
+            }
+        }
 }
 
 #Preview {
