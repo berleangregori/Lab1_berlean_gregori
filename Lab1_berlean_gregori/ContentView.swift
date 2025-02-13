@@ -73,7 +73,7 @@ struct ContentView: View {
         timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
             wrongCount += 1
             attempts += 1
-                
+            resetGame()
         }
     }
     
