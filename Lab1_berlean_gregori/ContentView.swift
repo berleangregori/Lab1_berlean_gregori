@@ -22,7 +22,7 @@ struct ContentView: View {
             
             // Display the Number
             Text("\(number)")
-                .font(.system(size: 60, weight: .bold, design: .rounded))
+                .font(.system(size: 100, weight: .bold, design: .rounded))
                 .foregroundColor(.blue)
             
             // Prime / Not Prime Options
