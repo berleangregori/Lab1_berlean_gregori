@@ -74,7 +74,7 @@ struct ContentView: View {
             wrongCount += 1
             attempts += 1
                 
-    }
+        }
     }
     
     // Helper function to Check if a Number is Prime
@@ -85,6 +85,22 @@ struct ContentView: View {
         }
         return true
     }
+    
+    // Function to Check Answer and Update Score
+    func checkAnswer(isPrime: Bool) {
+        let correct = (isPrime == self.isPrime(number))
+        isCorrect = correct
+            
+        if correct {
+            correctCount += 1
+        } else {
+            wrongCount += 1
+        }
+        
+        attempts += 1
+            
+    }
+    
 }
 
 #Preview {
