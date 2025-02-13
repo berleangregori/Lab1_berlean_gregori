@@ -62,6 +62,11 @@ struct ContentView: View {
         .onAppear {
             startTimer()
         }
+        .alert(isPresented: .constant(attempts > 0 && attempts % 10 == 0)) {
+            Alert(title: Text("Score Summary"),
+                message: Text("Correct: \(correctCount)\nWrong: \(wrongCount)"),
+                dismissButton: .default(Text("OK")))
+        }
     }
     // Timer to Change Number Every 5 Seconds
         func startTimer() {
