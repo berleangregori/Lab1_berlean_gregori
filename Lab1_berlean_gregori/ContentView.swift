@@ -101,6 +101,14 @@ struct ContentView: View {
             
     }
     
+    // Function to Reset the Game with a New Number
+    func resetGame() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            number = Int.random(in: 1...100)
+            isCorrect = nil
+        }
+    }
+    
 }
 
 #Preview {
