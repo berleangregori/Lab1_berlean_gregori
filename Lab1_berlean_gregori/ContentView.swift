@@ -98,7 +98,7 @@ struct ContentView: View {
         }
         
         attempts += 1
-            
+        resetGame()
     }
     
     // Function to Reset the Game with a New Number
