@@ -20,10 +20,17 @@ struct ContentView: View {
         VStack {
             Spacer()
             
-            /// Display the Number
+            // Display the Number
             Text("\(number)")
                 .font(.system(size: 60, weight: .bold, design: .rounded))
                 .foregroundColor(.blue)
+            
+            // Prime / Not Prime Options
+            Button(action: { checkAnswer(isPrime: true) }) {
+                Text("Prime")
+                    .font(.title)
+                    .foregroundColor(.blue)
+            }
     
         }
         .padding()
