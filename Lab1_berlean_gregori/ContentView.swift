@@ -19,13 +19,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Spacer()
-            
-            // Display the Number
+
+            // Display the Random Number
             Text("\(number)")
                 .font(.system(size: 100, weight: .bold, design: .rounded))
                 .foregroundColor(.blue)
             
-            // Prime / Not Prime Options
+            // Prime / Not Prime Options buttons
             Button(action: { checkAnswer(isPrime: true) }) {
                 Text("Prime")
                     .font(.title)
@@ -36,6 +36,7 @@ struct ContentView: View {
                     .stroke(Color.blue, lineWidth: 2))
             }
             
+            // Not Prime button
             Button(action: { checkAnswer(isPrime: false) }) {
                 Text("Not Prime")
                     .font(.title)
