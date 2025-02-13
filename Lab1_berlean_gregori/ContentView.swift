@@ -37,6 +37,15 @@ struct ContentView: View {
                     .font(.title)
                     .foregroundColor(.blue)
             }
+            
+            // Display Correct or Incorrect Icon
+            if let isCorrect = isCorrect {
+                Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
+                    .resizable()
+                    .frame(width: 80, height: 80)
+                    .foregroundColor(isCorrect ? .green : .red)
+                    .padding()
+            }
     
         }
         .padding()
