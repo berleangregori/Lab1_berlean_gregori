@@ -31,6 +31,12 @@ struct ContentView: View {
                     .font(.title)
                     .foregroundColor(.blue)
             }
+            
+            Button(action: { checkAnswer(isPrime: false) }) {
+                Text("Not Prime")
+                    .font(.title)
+                    .foregroundColor(.blue)
+            }
     
         }
         .padding()
