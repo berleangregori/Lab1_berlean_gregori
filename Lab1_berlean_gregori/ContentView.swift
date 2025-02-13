@@ -30,12 +30,20 @@ struct ContentView: View {
                 Text("Prime")
                     .font(.title)
                     .foregroundColor(.blue)
+                    .padding()
+                    .frame(width: 175, height: 50)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.blue, lineWidth: 2))
             }
             
             Button(action: { checkAnswer(isPrime: false) }) {
                 Text("Not Prime")
                     .font(.title)
-                    .foregroundColor(.blue)
+                    .foregroundColor(.red)
+                    .padding()
+                    .frame(width: 175, height: 50)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.red, lineWidth: 2))
             }
             
             // Display Correct or Incorrect Icon
