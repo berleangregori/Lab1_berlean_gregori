@@ -18,10 +18,13 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Spacer()
+            
+            /// Display the Number
+            Text("\(number)")
+                .font(.system(size: 60, weight: .bold, design: .rounded))
+                .foregroundColor(.blue)
+    
         }
         .padding()
     }
