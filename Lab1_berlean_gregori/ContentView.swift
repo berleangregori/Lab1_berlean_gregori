@@ -46,7 +46,18 @@ struct ContentView: View {
                     .foregroundColor(isCorrect ? .green : .red)
                     .padding()
             }
-    
+            
+            // Score Counter
+            HStack {
+                Text("Correct: \(correctCount)")
+                    .foregroundColor(.green)
+                Spacer()
+                Text("Wrong: \(wrongCount)")
+                    .foregroundColor(.red)
+                }
+                .padding(.horizontal)
+                        
+                Spacer()
         }
         .padding()
     }
