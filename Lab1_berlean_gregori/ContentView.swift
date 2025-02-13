@@ -69,12 +69,21 @@ struct ContentView: View {
         }
     }
     // Timer to Change Number Every 5 Seconds
-        func startTimer() {
-            timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
+    func startTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
                 wrongCount += 1
                 attempts += 1
                 
             }
+    }
+    
+    // Helper function to Check if a Number is Prime
+        func isPrime(_ num: Int) -> Bool {
+            if num < 2 { return false }
+            for i in 2..<num {
+                if num % i == 0 { return false }
+            }
+            return true
         }
 }
 
